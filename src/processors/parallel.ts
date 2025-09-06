@@ -4,11 +4,11 @@ export class ParallelProcessor {
 
     constructor(workerCount: number = 4) {
         this.workerCount = workerCount;
-        console.log(`✨ ${this.name} Processor initialized with ${workerCount} workers`);
+        console.log(`${this.name} Processor initialized with ${workerCount} workers`);
     }
 
     async process(data: any[]): Promise<any[]> {
-        console.log(`🔄 ${this.name}: Processing ${data.length} records using ${this.workerCount} parallel workers...`);
+        console.log(`${this.name}: Processing ${data.length} records using ${this.workerCount} parallel workers...`);
         
         // TODO: Implement parallel processing logic
         // For now, just return the data
@@ -21,6 +21,6 @@ export class ParallelProcessor {
 
     setWorkerCount(count: number): void {
         this.workerCount = count;
-        console.log(`👥 Worker count updated to: ${count}`);
+        console.log(`Worker count updated to: ${count}`);
     }
 }

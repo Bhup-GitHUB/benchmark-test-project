@@ -1,0 +1,21 @@
+{
+    "name": "data-processing-analyzer",
+    "version": "1.0.0",
+    "description": "A comparative study of different data processing architectures",
+    "main": "dist/index.js",
+    "scripts": {
+      "start": "node dist/index.js",
+      "build": "tsc",
+      "dev": "ts-node src/index.ts",
+      "test": "echo \"Tests will be added later\" && exit 0"
+    },
+    "keywords": ["data-processing", "performance", "typescript", "senior-project"],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+      "@types/node": "^20.0.0",
+      "typescript": "^5.0.0",
+      "ts-node": "^10.9.0"
+    },
+    "dependencies": {}
+  }

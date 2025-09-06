@@ -1,19 +1,23 @@
+import { BatchProcessor } from "./processors/batch";
+import { ParallelProcessor } from "./processors/parallel";
+import { SequentialProcessor } from "./processors/sequential";
+import { StreamProcessor } from "./processors/stream";
 
-console.log('🚀 Data Processing Performance Analyzer');
-console.log('📚 Senior Project - Getting Started');
-console.log('');
 
-// This is where we'll build our data processing comparison
-function main() {
-    console.log('✨ Project initialized successfully!');
-    console.log('📁 Next steps:');
-    console.log('   1. Create sample data');
-    console.log('   2. Build basic data processor');
-    console.log('   3. Add performance monitoring');
-    console.log('   4. Compare different approaches');
+
+console.log('🎯 Testing our processors:');
     console.log('');
-    console.log('🎯 Taking it slow and steady!');
-}
-
-
-main();
+    
+    // Create instances of our processors
+    const sequential = new SequentialProcessor();
+    const batch = new BatchProcessor(500);
+    const parallel = new ParallelProcessor(2);
+    const stream = new StreamProcessor();
+    
+    console.log('📋 Available processors:');
+    console.log(`   1. ${sequential.getInfo()}`);
+    console.log(`   2. ${batch.getInfo()}`);
+    console.log(`   3. ${parallel.getInfo()}`);
+    console.log(`   4. ${stream.getInfo()}`);
+    console.log('');
+    console.log('✅ All processors initialized successfully!');
